@@ -1,3 +1,9 @@
+onload = () => {
+    if (!sessionStorage.hasOwnProperty('loggedIn')) {
+        location.href = "/Trabalho/pages/entrar.html";
+    }
+}
+
 // declara um conjunto inicial de contatos
 var db_contatos_inicial = {
     "data": [
@@ -115,5 +121,3 @@ function deleteContato(id) {
     // Atualiza os dados no Local Storage
     localStorage.setItem('db_contato', JSON.stringify(db));
 }
-
-export { db, db_contatos_inicial};
