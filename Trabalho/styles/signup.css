@@ -4,18 +4,32 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
+main {
+    width: 100%;
+    height: 74.5vh;
+}
+
+.box-main {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
 .box-register {
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    display: flex;
 
-    transform: translate(-50%, -50%);
+    flex-direction: column;
+    text-align: center;
 
-    width: 25vw;
+    width: 80vw;
     height: 45vh;
 
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
@@ -23,10 +37,6 @@ body {
     background-color: rgb(255, 255, 255);
 
     margin: auto auto;
-    
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 
 .box-register-title {
@@ -51,31 +61,60 @@ body {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     background-color: #add8e6;
     margin-top: 20px;
     color: black;
 }
 
-@media screen and (max-width: 1024px) and (max-height: 600px) {
-    .box-register {
-        width: 40vw;
-        height: 60vh;
-    }   
-}
-
 @media screen and (max-width: 768px) {
     .box-register {
-        width: 70vw;
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .box-register {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-height: 740px) {
+    .box-register {
         height: 60vh;
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (min-height: 800px) {
     .box-register {
-        width: 80vw;
-        height: 60vh;
+        height: 50vh;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .box-register {
+        height: 55vw;
+    }
+}
+
+@media screen and (width: 1024px) and (height: 600px) {
+    .box-register {
+        width: 35vw;
+        height: 40vw;
+    }
+}
+
+@media screen and (width: 1280px) and (height: 800px) {
+    .box-register {
+        width: 30vw;
+        height: 35vw;
+    }
+}
+
+@media screen and (min-width: 1400px) and (min-height: 800px) {
+    .box-register {
+        width: 20vw;
+        height: 45vh;
     }
 }
 
